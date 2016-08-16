@@ -3,6 +3,7 @@
     package="tech.finaqua.app">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
@@ -23,6 +24,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-    </application>
 
+
+        <activity android:name=".CameraActivity" />
+        <activity android:name=".TrackActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".ContactActivity" />
+        <activity android:name=".ForecastActivity" />
+        <activity android:name=".EducationActivity" />
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity
+            android:name=".MapTrackingActivity"
+            android:label="@string/title_activity_map_tracking" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+
+
+    </application>
 </manifest>

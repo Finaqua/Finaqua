@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="tech.finaqua.app.AboutActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="About Us\nSince 95% of the world’s fisheries face a decline in the fish stock, we’ve created this community app to help fisheries locally and globally in fisheries management. Also some features the fishermen could use before fishing, forecast, regulation and maps. Every fisherman can upload pictures and location and other things that can be published online to the community to share information worldwide. We’re providing tracking mode, Reporting mode, leaderboard and sharing information to assist scientists In researches. How about education? Do you know everything about the marine life? We’re also providing education category to educate people by adding animated videos and facts about the marine life."/>
+</RelativeLayout>

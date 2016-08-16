@@ -1,5 +1,6 @@
 package tech.finaqua.app;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -31,11 +32,11 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View view) {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
-
-                setContentView(R.layout.activity_camera);
+                startActivity(new Intent(getApplicationContext(), CameraActivity.class));
+                /*setContentView(R.layout.activity_camera);
                 getFragmentManager().beginTransaction()
                         .replace(R.id.container, Camera2BasicFragment.newInstance())
-                        .commit();
+                        .commit();*/
 
 
             }
@@ -89,7 +90,33 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        /*if (id == R.id.nav_capture) {
+            // Handle the camera action
+            //Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
+        } else if (id == R.id.nav_profile) {
+
+        } else*/ if (id == R.id.nav_tracking) {
+            startActivity(new Intent(getApplicationContext(), TrackActivity.class));
+        } else if (id == R.id.nav_map) {
+            startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+        } else if (id == R.id.nav_forecast) {
+            startActivity(new Intent(getApplicationContext(), ForecastActivity.class));
+        } else if (id == R.id.nav_education) {
+            startActivity(new Intent(getApplicationContext(), EducationActivity.class));
+        } else if (id == R.id.nav_community) {
+
+        } else if (id == R.id.nav_red_list) {
+
+        } else if (id == R.id.nav_fishbase) {
+
+        } else if (id == R.id.nav_regulations) {
+
+        } else if (id == R.id.nav_contact) {
+            startActivity(new Intent(getApplicationContext(), ContactActivity.class));
+        } else if (id == R.id.nav_about) {
+            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+        }
+        /*if (id == R.id.nav_camera) {
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
 
@@ -101,7 +128,7 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_send) {
 
-        }
+        }*/
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
