@@ -8,13 +8,11 @@
     <string name="action_settings">Settings</string>
 
 
-
     <string name="picture">Picture</string>
     <string name="description_info">Info</string>
     <string name="request_permission">This sample needs camera permission.</string>
     <string name="camera_error">This device doesn\'t support Camera2 API.</string>
     <string name="intro_message">intro message</string>
-
 
 
     <string name="drawer_capture">Capture</string>
@@ -33,4 +31,6 @@
     <string name="title_activity_map_tracking">Tracking</string>
 
     <string name="about_us">About Us\nSince 95% of the world’s fisheries face a decline in the fish stock, we’ve created this community app to help fisheries locally and globally in fisheries management. Also some features the fishermen could use before fishing, forecast, regulation and maps. Every fisherman can upload pictures and location and other things that can be published online to the community to share information worldwide. We’re providing tracking mode, Reporting mode, leaderboard and sharing information to assist scientists In researches. How about education? Do you know everything about the marine life? We’re also providing education category to educate people by adding animated videos and facts about the marine life.</string>
+
+    <string name="title_activity_splash">Finaqua</string>
 </resources>
