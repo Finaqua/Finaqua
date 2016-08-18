@@ -1,13 +1,26 @@
 package tech.finaqua.app;
 
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class EducationActivity extends AppCompatActivity {
+public class EducationActivity extends Fragment {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_education);
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.activity_education, container, false);
     }
 }
+//public class EducationActivity extends AppCompatActivity {
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        setContentView(R.layout.activity_education);
+//    }
+//}

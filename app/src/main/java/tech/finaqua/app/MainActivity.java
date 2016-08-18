@@ -17,8 +17,6 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +48,11 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //TODO : Replace with a Main Fragment.
+        ForecastActivity forecast_fragment = new ForecastActivity();
+        forecast_fragment.setArguments(getIntent().getExtras());
+        getSupportFragmentManager().beginTransaction().add(R.id.main_fragment_container, forecast_fragment).commit();
     }
 
     @Override
@@ -99,10 +102,19 @@ public class MainActivity extends AppCompatActivity
             startActivity(new Intent(getApplicationContext(), TrackActivity.class));
         } else if (id == R.id.nav_map) {
             startActivity(new Intent(getApplicationContext(), MapsActivity.class));
+//            MapsActivity map_fragment = new MapsActivity();
+//            map_fragment.setArguments(getIntent().getExtras());
+//            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, map_fragment).commit();
         } else if (id == R.id.nav_forecast) {
-            startActivity(new Intent(getApplicationContext(), ForecastActivity.class));
+            //startActivity(new Intent(getApplicationContext(), ForecastActivity.class));
+            ForecastActivity forecast_fragment = new ForecastActivity();
+            forecast_fragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, forecast_fragment).commit();
         } else if (id == R.id.nav_education) {
-            startActivity(new Intent(getApplicationContext(), EducationActivity.class));
+            //startActivity(new Intent(getApplicationContext(), EducationActivity.class));
+            EducationActivity education_fragment = new EducationActivity();
+            education_fragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, education_fragment).commit();
         } else if (id == R.id.nav_community) {
 
         } else if (id == R.id.nav_red_list) {
@@ -112,9 +124,15 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_regulations) {
 
         } else if (id == R.id.nav_contact) {
-            startActivity(new Intent(getApplicationContext(), ContactActivity.class));
+            //startActivity(new Intent(getApplicationContext(), ContactActivity.class));
+            ContactActivity contact_fragment = new ContactActivity();
+            contact_fragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, contact_fragment).commit();
         } else if (id == R.id.nav_about) {
-            startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            //startActivity(new Intent(getApplicationContext(), AboutActivity.class));
+            AboutActivity about_fragment = new AboutActivity();
+            about_fragment.setArguments(getIntent().getExtras());
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, about_fragment).commit();
         }
         /*if (id == R.id.nav_camera) {
             // Handle the camera action
