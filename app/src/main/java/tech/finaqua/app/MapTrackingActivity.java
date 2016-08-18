@@ -2,7 +2,8 @@ package tech.finaqua.app;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
+//import android.support.v4.app.FragmentActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,7 +16,7 @@ import com.google.android.gms.maps.model.PolylineOptions;
 
 import java.util.Random;
 
-public class MapTrackingActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapTrackingActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
 
@@ -27,6 +28,7 @@ public class MapTrackingActivity extends FragmentActivity implements OnMapReadyC
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
     }
 
 

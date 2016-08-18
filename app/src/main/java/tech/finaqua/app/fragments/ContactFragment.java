@@ -1,26 +1,27 @@
-package tech.finaqua.app;
+package tech.finaqua.app.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ContactActivity extends Fragment {
+import tech.finaqua.app.R;
+
+public class ContactFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_contact, container, false);
+        return inflater.inflate(R.layout.fragment_contact, container, false);
     }
 }
-//public class ContactActivity extends AppCompatActivity {
+//public class ContactFragment extends AppCompatActivity {
 //
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_contact);
+//        setContentView(R.layout.fragment_contact);
 //    }
 //}

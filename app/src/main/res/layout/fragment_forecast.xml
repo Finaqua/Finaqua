@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="tech.finaqua.app.ForecastActivity"
+    tools:context=".fragments.ForecastFragment"
     android:background="#FFFFFF">
     <LinearLayout
         android:layout_width="match_parent"

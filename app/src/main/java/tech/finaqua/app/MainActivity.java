@@ -3,7 +3,6 @@ package tech.finaqua.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +12,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import tech.finaqua.app.fragments.AboutFragment;
+import tech.finaqua.app.fragments.ContactFragment;
+import tech.finaqua.app.fragments.EducationFragment;
+import tech.finaqua.app.fragments.ForecastFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //TODO : Replace with a Main Fragment.
-        ForecastActivity forecast_fragment = new ForecastActivity();
+        ForecastFragment forecast_fragment = new ForecastFragment();
         forecast_fragment.setArguments(getIntent().getExtras());
         getSupportFragmentManager().beginTransaction().add(R.id.main_fragment_container, forecast_fragment).commit();
     }
@@ -106,13 +110,13 @@ public class MainActivity extends AppCompatActivity
 //            map_fragment.setArguments(getIntent().getExtras());
 //            getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, map_fragment).commit();
         } else if (id == R.id.nav_forecast) {
-            //startActivity(new Intent(getApplicationContext(), ForecastActivity.class));
-            ForecastActivity forecast_fragment = new ForecastActivity();
+            //startActivity(new Intent(getApplicationContext(), ForecastFragment.class));
+            ForecastFragment forecast_fragment = new ForecastFragment();
             forecast_fragment.setArguments(getIntent().getExtras());
             getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, forecast_fragment).commit();
         } else if (id == R.id.nav_education) {
-            //startActivity(new Intent(getApplicationContext(), EducationActivity.class));
-            EducationActivity education_fragment = new EducationActivity();
+            //startActivity(new Intent(getApplicationContext(), EducationFragment.class));
+            EducationFragment education_fragment = new EducationFragment();
             education_fragment.setArguments(getIntent().getExtras());
             getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, education_fragment).commit();
         } else if (id == R.id.nav_community) {
@@ -124,13 +128,13 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_regulations) {
 
         } else if (id == R.id.nav_contact) {
-            //startActivity(new Intent(getApplicationContext(), ContactActivity.class));
-            ContactActivity contact_fragment = new ContactActivity();
+            //startActivity(new Intent(getApplicationContext(), ContactFragment.class));
+            ContactFragment contact_fragment = new ContactFragment();
             contact_fragment.setArguments(getIntent().getExtras());
             getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, contact_fragment).commit();
         } else if (id == R.id.nav_about) {
-            //startActivity(new Intent(getApplicationContext(), AboutActivity.class));
-            AboutActivity about_fragment = new AboutActivity();
+            //startActivity(new Intent(getApplicationContext(), AboutFragment.class));
+            AboutFragment about_fragment = new AboutFragment();
             about_fragment.setArguments(getIntent().getExtras());
             getSupportFragmentManager().beginTransaction().replace(R.id.main_fragment_container, about_fragment).commit();
         }

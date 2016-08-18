@@ -15,35 +15,31 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity android:name=".CameraActivity" />
         <activity android:name=".TrackActivity" />
-        <!--<activity android:name=".AboutActivity" />-->
-        <!--<activity android:name=".ContactActivity" />-->
-        <!--<activity-->
-            <!--android:name=".ForecastActivity"-->
-            <!--android:theme="@style/AppTheme.NoActionBar" />-->
-        <!--<activity android:name=".EducationActivity" />-->
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".MapTrackingActivity"
             android:label="@string/title_activity_map_tracking" />
-
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
         <activity
             android:name=".SplashActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
