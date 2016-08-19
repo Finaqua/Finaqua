@@ -1,8 +1,11 @@
-package tech.finaqua.app;
+package tech.finaqua.app.activities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import tech.finaqua.app.R;
+import tech.finaqua.app.activities.MainActivity;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -13,7 +16,12 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        getSupportActionBar().hide();
+        try{
+            getSupportActionBar().hide();
+        }
+        catch(Exception e){
+            e.printStackTrace();
+        }
 
         Thread timerThread = new Thread(){
             public void run(){

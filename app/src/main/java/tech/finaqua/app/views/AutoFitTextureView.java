@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package tech.finaqua.app;
+package tech.finaqua.app.views;
 
 import android.content.Context;
 import android.util.AttributeSet;

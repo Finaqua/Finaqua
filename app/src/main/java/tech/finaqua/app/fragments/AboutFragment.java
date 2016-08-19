@@ -1,7 +1,7 @@
 package tech.finaqua.app.fragments;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,16 +12,7 @@ public class AboutFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // Inflate the layout for this fragment
+        super.onCreateView(inflater,container,savedInstanceState);
         return inflater.inflate(R.layout.fragment_about, container, false);
     }
 }
-//public class AboutFragment extends AppCompatActivity {
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.fragment_about);
-//    }
-//}

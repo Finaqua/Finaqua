@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package tech.finaqua.app;
+package tech.finaqua.app.fragments;
 
 import android.Manifest;
 import android.app.Activity;
@@ -70,6 +70,9 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.TimeUnit;
+
+import tech.finaqua.app.R;
+import tech.finaqua.app.views.AutoFitTextureView;
 
 public class Camera2BasicFragment extends Fragment
         implements View.OnClickListener, FragmentCompat.OnRequestPermissionsResultCallback {
