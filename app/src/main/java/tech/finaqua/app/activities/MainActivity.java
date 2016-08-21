@@ -44,15 +44,15 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();*/
-                replaceFragment(fragmentCamera);
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();*/
+//                replaceFragment(fragmentCamera);
+//            }
+//        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity
 
         //TODO : Replace with a Main Fragment.
         if (savedInstanceState == null) {
-            replaceFragment(fragmentAbout);
+            replaceFragment(fragmentCamera);
         }
     }
 
@@ -107,6 +107,7 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         switch(id){
+            case R.id.nav_capture       : replaceFragment(fragmentCamera); break;
             case R.id.nav_tracking      : startActivity(new Intent(getApplicationContext(), TrackActivity.class)); break;
             case R.id.nav_map           : replaceFragment(fragmentMapping); break;
             case R.id.nav_forecast      : replaceFragment(fragmentForecast); break;
@@ -119,36 +120,6 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_about         : replaceFragment(fragmentAbout); break;
             default                     : replaceFragment(fragmentCamera); break;
         }
-//        /*if (id == R.id.nav_capture) {
-//            // Handle the camera action
-//            //Toast.makeText(getApplicationContext(), "hi", Toast.LENGTH_SHORT).show();
-//        } else if (id == R.id.nav_profile) {
-//
-//        } else*/ if (id == R.id.nav_tracking) {
-//            startActivity(new Intent(getApplicationContext(), TrackActivity.class));
-//        } else if (id == R.id.nav_map)          { replaceFragment(new MappingFragment()); }
-//        else if (id == R.id.nav_forecast)       { replaceFragment(new ForecastFragment());}
-//        else if (id == R.id.nav_education)      { replaceFragment(new EducationFragment()); }
-//        else if (id == R.id.nav_community)      { }
-//        else if (id == R.id.nav_red_list)       { }
-//        else if (id == R.id.nav_fishbase)       { }
-//        else if (id == R.id.nav_regulations)    { }
-//        else if (id == R.id.nav_contact)        { replaceFragment(new ContactFragment()); }
-//        else if (id == R.id.nav_about)          { replaceFragment(new AboutFragment()); }
-//        /*if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
-//
-//        } else if (id == R.id.nav_manage) {
-//
-//        } else if (id == R.id.nav_share) {
-//
-//        } else if (id == R.id.nav_send) {
-//
-//        }*/
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
