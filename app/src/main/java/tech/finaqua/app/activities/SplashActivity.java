@@ -22,7 +22,6 @@ public class SplashActivity extends AppCompatActivity {
         catch(Exception e){
             e.printStackTrace();
         }
-
         Thread timerThread = new Thread(){
             public void run(){
                 try{
