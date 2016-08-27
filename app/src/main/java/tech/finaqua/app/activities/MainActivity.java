@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.app.Fragment;
 
+import tech.finaqua.app.fragments.InformationFragment;
 import tech.finaqua.app.fragments.MappingFragment;
 import tech.finaqua.app.fragments.Camera2BasicFragment;
 import tech.finaqua.app.R;
@@ -61,12 +62,12 @@ public class MainActivity extends AppCompatActivity {
 
     private class MainPagerAdapter extends FragmentStatePagerAdapter {
         private Context context;
-        private String tabTitles[] = new String[] { "Map", "Capture", "About", "Forecast" };
+        private String tabTitles[] = new String[] { "Map", "Capture", "Forecast", "Information" };
         private int[] imageResId = {
                 R.drawable.ic_map,
                 R.drawable.ic_capture,
-                R.drawable.ic_about,
-                R.drawable.ic_forecast
+                R.drawable.ic_forecast,
+                R.drawable.ic_information
         };
 
         public MainPagerAdapter(FragmentManager fm, Context context) {
@@ -78,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
             switch(position){
                 case 0 : return new MappingFragment();
                 case 1 : return new Camera2BasicFragment();
-                case 2 : return new AboutFragment();
-                case 3 : return new ForecastFragment();
+                case 2 : return new ForecastFragment();
+                case 3 : return new InformationFragment();
 //                case 0 : return new AboutFragment();
 //                case 1 : return new AboutFragment();
 //                case 2 : return new MappingFragment();

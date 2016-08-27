@@ -15,18 +15,19 @@
     <string name="intro_message">intro message</string>
 
 
-    <string name="drawer_capture">Capture</string>
-    <string name="drawer_tracking">Tracking</string>
-    <string name="drawer_profile">Profile</string>
-    <string name="drawer_map">Map</string>
-    <string name="drawer_forecast">Forecast</string>
-    <string name="drawer_education">Education</string>
-    <string name="drawer_community">Community</string>
-    <string name="drawer_red_list">Red List</string>
-    <string name="drawer_fishbase">FishBase</string>
-    <string name="drawer_regulations">Regulations</string>
-    <string name="drawer_contact">Contact</string>
-    <string name="drawer_about">About</string>
+    <string name="label_capture">Capture</string>
+    <string name="label_tracking">Tracking</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_map">Map</string>
+    <string name="label_forecast">Forecast</string>
+    <string name="label_education">Education</string>
+    <string name="label_community">Community</string>
+    <string name="label_red_list">Red List</string>
+    <string name="label_fishbase">FishBase</string>
+    <string name="label_regulations">Regulations</string>
+    <string name="label_contact">Contact</string>
+    <string name="label_about">About</string>
+    <string name="label_information">Information</string>
     <string name="title_activity_maps">Map</string>
     <string name="title_activity_map_tracking">Tracking</string>
 
