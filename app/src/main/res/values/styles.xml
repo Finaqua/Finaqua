@@ -29,4 +29,15 @@
         <item name="android:background">@color/black_overlay</item>
     </style>
 
+    <style name="TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorPrimaryDark</item>
+        <item name="tabTextAppearance">@style/TabTextAppearanceStyle</item>
+        <item name="tabMaxWidth">0dp</item>
+        <item name="tabGravity">fill</item>
+    </style>
+    <style name="TabTextAppearanceStyle" parent="TextAppearance.Design.Tab">
+        <!--<item name="android:textSize">14sp</item>-->
+        <!--<item name="android:textColor">?android:textColorSecondary</item>-->
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>
